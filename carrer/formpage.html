@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html>
+    <head lang="en"> 
+    <meta charset="UTF-8"> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
+    <style> 
+    body, form, span, select, input, textarea 
+    { 
+        font-family: 'Open Sans', sans-serif; font-size: 14px;
+    }
+    html 
+    {
+         margin: 0; padding: 0; width: 100%; 
+    } 
+    form, body
+    { 
+        margin-left: auto; margin-right: auto; max-width: 1000px;
+    } 
+    span 
+    { 
+        display: block; margin: 5px 0; overflow: auto; padding: 0 1%; width: 98%; 
+    } 
+    .related 
+    { 
+        width: 50%; float: left; overflow: auto; 
+    } 
+    fieldset 
+    { 
+        display: block; margin: 0; padding: 1%; width: calc(98% - 4px); border: 2px groove #bbb; 
+    } 
+    textarea 
+    { 
+        width: calc(100% - 14px); padding: 5px; border: 2px groove #bbb; 
+    } 
+    input, select 
+    { 
+        float: right; 
+    } 
+    select 
+    { 
+        width: 162px; 
+    } 
+    input[type='checkbox'], input[type='radio'] 
+    { 
+        float: left; margin-right: 10px; 
+    } 
+    input[type='submit'] 
+    { 
+        float: left; margin: 10px 0; padding: 10px 40px; 
+    } 
+    input[type='submit'], fieldset, textarea 
+    { 
+        border-radius: 5px; 
+    } 
+    @media screen and (max-width: 760px) 
+    { 
+        .related 
+        { 
+            width: 100%; 
+        } 
+        input[type='text'], input[type='number'], input[type='date'], input[type='tel'], input[type='email'], select 
+        { 
+            width: 400px; 
+        } 
+    } 
+    @media screen and (max-width: 670px) 
+    { 
+        input[type='text'], input[type='number'], input[type='date'], input[type='tel'], input[type='email'], select 
+        { 
+            width: calc(100% - 4px); 
+        } 
+    } 
+    </style>
+    </head> 
+    <body> 
+        <h1>Reservation Request Form</h1>
+         <form> 
+             <div class="related">
+                  <span>First name (required): <input type="text" name="first_name" required></span> 
+                  <span>Last name (required): <input type="text" name="last_name" required></span> 
+                  <span>Email: <input type="email" name="email"></span>
+                   <span>Phone (required): <input type="tel" name="phone" required></span> 
+            </div> 
+            <div class="related"> 
+                <span>Address (required): <input type="text" name="address" required></span> 
+                <span>Apartment, Suite, or No.: <input type="text" name="address_2"></span> 
+                <span>City (required): <input type="text" name="city" required></span> 
+                <span>State: <select name="state" required>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option> 
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option> 
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option> 
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option> 
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option> 
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option> 
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option> 
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option> 
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option> 
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option> 
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option> 
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option> 
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option> 
+                </select> </span>
+             </div>
+            <fieldset> 
+                <legend>Party Details</legend>
+                 <p>So that we may select the best room for your stay, please tell us a little about your party.</p>
+                  <div class="related"> 
+                      <span>Date of Arrival (required): <input type="date" name="arrival" required></span>
+                      <span>Date of Departure (required): <input type="date" name="departure" required></span>
+                      <span>No. of guests (required): <input type="number" name="party_size" required></span> 
+                      <span>Have you stayed with us before?<br> 
+                        Yes <input type="radio" name="stayed" value="yes"><br>
+                         No <input type="radio" name="stayed" value="no">
+                      </span> 
+                    </div> 
+                    <div class="related"> 
+                        <span>Preferred Bed Arrangment: <select name="beds"> 
+                            <option value="one king">One King Bed</option> 
+                            <option value="one queen">One Queen Bed</option> 
+                            <option value="two double">Two Double Beds</option> 
+                            <option value="two queen">Two Queen Beds</option> 
+                            <option value="two king">Two King Beds</option> 
+                        </select> </span> 
+                        <span>Amenities you plan to use (select all that apply):<br> 
+                            Room Service <input type="checkbox" name="room_service"><br> 
+                            Sofa Bed <input type="checkbox" name="sofa_bed"><br> 
+                            Swimming Pool <input type="checkbox" name="swimming"><br> 
+                            Spa <input type="checkbox" name="spa"><br> 
+                            Fitness Room <input type="checkbox" name="fitness"><br> 
+                            Wireless Internet <input type="checkbox" name="wifi"><br> 
+                        </span> 
+                    </div> 
+            </fieldset> 
+            <p>Special requests</p> 
+            <textarea placeholder="Is there anything else you'd like to let us know about your stay?" rows="6" name="comments">
+            </textarea> 
+            <span>
+                <input type="checkbox" name="opt_in" value="yes">
+                Would you like to receive an occasional email with discount coupons and special offers? If so, select the following box to join our email list.
+            </span> 
+            <span>
+                <input type="submit">
+            </span> 
+        </form> 
+    </body> 
+    </html>
+

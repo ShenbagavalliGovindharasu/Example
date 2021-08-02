@@ -1,0 +1,51 @@
+<html>
+    <head>
+     <title>login</title>
+     <link rel="stylesheet" href="C:\Users\91998\OneDrive\Desktop\java 6 pm class\java traniing\assignment1\css\demo.css">
+     <style>
+        body
+        {  
+            background-image: url(img2.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+    </style> 
+   
+    </head>
+    <body onload="text1" >
+
+        <script>
+            function Email(inputText)
+            {
+            var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            let result=inputText.value.match(re);
+            if(result)
+            {
+            alert("Valid email address!");
+           
+            }
+            else
+            {
+            alert("You have entered an invalid email address!");
+            
+            }
+            }
+            </script>
+    
+        <div class="d5">
+
+  
+<form name="form1">
+    <center> <h1>LOGIN</h1>
+    <input type='text' id="fname" name='text1' placeholder="Email-id"/><br><br>
+    <input type="password" id="lname" name="lname" placeholder="password"><br><br>
+    <input type="submit" name="submit" value="Submit" onclick="Email(text1)"/>
+    
+</center>
+    </form>
+</div>
+</body>
+ 
+</html>
+
+
